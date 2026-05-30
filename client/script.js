@@ -1,4 +1,4 @@
-fetch('http://localhost:5000/projects')
+fetch('https://portfolio-project-56fz.onrender.com/projects')
   .then(response => response.json())
   .then(data => {
 
