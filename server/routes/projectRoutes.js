@@ -3,14 +3,24 @@ const router = express.Router();
 
 const Project = require("../models/Project");
 
+// CREATE project
 router.post("/", async (req, res) => {
-  const project = await Project.create(req.body);
-  res.json(project);
+  try {
+    const project = await Project.create(req.body);
+    res.json(project);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
+// GET all projects
 router.get("/", async (req, res) => {
-  const projects = await Project.find();
-  res.json(projects);
+  try {
+    const projects = await Project.find();
+    res.json(projects);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 module.exports = router;
