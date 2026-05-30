@@ -1,10 +1,111 @@
+/* General Page Styling */
 body {
-  font-family: Arial;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
-.project {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px 0;
+/* Header */
+header {
+    background-color: #c725eb;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+/* Sections */
+section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Section Headings */
+h2 {
+    color: #5325eb;
+    border-bottom: 2px solid #0533ff;
+    padding-bottom: 5px;
+}
+
+/* Skills List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    background-color: #a219e1;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* Buttons and Links */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Project Cards */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#projects div {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+#projects h3 {
+    color: #5325eb;
+}
+
+/* Contact Section */
+section p {
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        margin: 10px;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    #projects div {
+        width: 100%;
+    }
 }
