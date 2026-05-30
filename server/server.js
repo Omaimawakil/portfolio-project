@@ -11,7 +11,10 @@ app.use(express.json());
 // ✅ Routes
 const projectRoutes = require("./routes/projectRoutes");
 app.use("/projects", projectRoutes);
-
+//Root Route 
+app.get("/", (req, res) => {
+  res.send("Portfolio API is running");
+});
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
